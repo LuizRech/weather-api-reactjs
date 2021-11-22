@@ -14,8 +14,6 @@ function App() {
 
     fetch(Connection('Dublin')).then(response => response.json())
     .then(data => {
-      console.log(data);
-  
       setTemp_c(data.current.temp_c);
       setLocationName(data.location.name);
     });
@@ -27,12 +25,11 @@ function App() {
     
     fetch(Connection(keywords)).then(response => response.json())
     .then(data => {
-      console.log(data);
-  
-      setTemp_c(data.current.temp_c);
-      setLocationName(data.location.name);
+      if(data.current) {        
+        setTemp_c(data.current.temp_c);
+        setLocationName(data.location.name);
+      }
     });
-
   }
 
   return (
