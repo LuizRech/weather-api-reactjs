@@ -5,19 +5,19 @@ import Connection from './config/Connection';
 
 function App() {
 
-  const [temp_c, setTemp_c] = useState();
+  const [temp_c, setTemp_c] = useState(null);
   const [locationName, setLocationName] = useState();
   const [keywords, setKeywords] = useState('')
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    fetch(Connection('Dublin')).then(response => response.json())
-    .then(data => {
-      setTemp_c(data.current.temp_c);
-      setLocationName(data.location.name);
-    });
+  //   fetch(Connection('Dublin')).then(response => response.json())
+  //   .then(data => {
+  //     setTemp_c(data.current.temp_c);
+  //     setLocationName(data.location.name);
+  //   });
 
-  }, []);
+  // }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ function App() {
 
         <p>
           <h1>Location: {locationName}</h1>
-          <h2>Temp: {temp_c}</h2>
+          <h2>Temp: {temp_c ? temp_c : 'teste'}</h2>
         </p>
       </header>
     </div>
