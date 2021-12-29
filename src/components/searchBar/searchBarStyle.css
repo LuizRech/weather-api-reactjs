@@ -1,0 +1,99 @@
+.SearchBarComponent_container {
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: 75%;
+  bottom: 0%;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(70px);
+
+  border-radius: 20px 20px 0px 0px;
+
+  display: inline-grid;
+}
+
+.SearchBarComponent_container > .label {
+  padding-left: 6%;
+  padding-top: 2%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+  
+  font-family: Roboto;
+  
+  display: flex;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+}
+
+.SearchBarComponent_container > .containerBottom {
+  width: 90%;
+  margin-left: 5%;
+
+  height: 100px;
+
+  opacity: 0.3;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.containerBottom > .searchBar {
+  border: 1px solid #E7E7F2;
+  box-sizing: border-box;
+  border-radius: 10px;
+  
+  height: 72px;
+  width: 90%;
+
+  margin-top: 2%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.searchDiv, .searchInput {
+  border: 0;
+  height: 100%;
+  width: 60%;
+}
+
+.searchDiv > input::placeholder {
+  opacity: 1;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.separator {
+  width: 0.2px;
+  height: 100%; 
+  
+  opacity: 1;
+  border: 1px solid #E7E7F2;
+}
+
+.dateInput {
+  opacity: 1;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+
+  border: 0;
+  height: 100%;
+}
+
+.searchButton {
+  background: #91CB82;
+  border-radius: 10px;
+
+  margin-top: 2%;
+  height: 72px;
+
+  color: white;
+}

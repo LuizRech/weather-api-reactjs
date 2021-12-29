@@ -3,6 +3,12 @@ import './App.css';
 
 import Connection from './config/Connection';
 
+//UI
+import SearchBarComponent from './components/searchBar/SearchBarComponent';
+
+console.log(process.env.REACT_APP_API_KEY);
+console.log("passou primeira")
+
 function App() {
 
   const [temp_c, setTemp_c] = useState(null);
@@ -30,7 +36,8 @@ function App() {
       }
     });
   }
-
+    console.log("luide");
+    console.log(process.env)
   return (
     <div className="App">
       <header className="App-header">
@@ -52,6 +59,8 @@ function App() {
           <h1>Location: {locationName}</h1>
           <h2>Temp: {temp_c ? temp_c : 'teste'}</h2>
         </p>
+
+        <SearchBarComponent />
       </header>
     </div>
   );
